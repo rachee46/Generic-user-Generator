@@ -18,8 +18,8 @@ credentials = {
 
 credentials["citrixCredentials"]["Value"] = []
 
-with open('device_id.txt', 'r') as file:
-    device_id = file.readlines()
+with open('device_id.txt', 'r') as inputfile:
+    device_id = inputfile.readlines()
 
 for item in device_id:
     generic_user = "generic" + str(device_id.index(item) + 1)
