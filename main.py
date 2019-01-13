@@ -43,6 +43,6 @@ for item in device_id:
         "Bdltko$5"
     })
 
-#Automatically generates the json formatted file with the value of the variable credentials
+#Automatically generates the json formatted file, credentials.txt, with the value of the variable credentials
 with open('credentials.txt', 'w') as outfile:
     json.dump(credentials, outfile)
