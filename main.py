@@ -32,6 +32,5 @@ for item in device_id:
         "Bdltko$5"
     })
 
-print(credentials)
 with open('credentials.txt', 'w') as outfile:
     json.dump(credentials, outfile)
