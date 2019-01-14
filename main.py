@@ -1,7 +1,7 @@
 import json
 
-#create a dictionary call credentials with the header for the json file
-#and a key "citrixCredentials" with a blank dictionary as its value
+#create a dictionary, credentials, with the header for the json file
+#and a key, "citrixCredentials", with a blank dictionary as its value
 credentials = {
     "serverHost": {
         "Value": "auth01.demo.gohealthcast.com"
@@ -27,11 +27,11 @@ with open('device_id.txt', 'r') as inputfile:
     device_id = inputfile.readlines()
 
 #Update the blank list in the "citrixCredentials" dictionary  
-#Each item in the lists will be a dictinary with deviceSerialNumber, username, and password as keys
-#The value of deviceSerialNumber is the next item in the device_id list
-#The value of username is a generic id in the format of string with "generic" and concatenated with an integer, 
+#Each item in the list will be a dictinary with deviceSerialNumber, username, and password as keys
+#The value of deviceSerialNumber (string)  is the next item in the device_id list
+#The value of username is a generic id (string) with "generic" and concatenated with an integer, 
 #the integer starting with 1 and up to the index number of the last item in the device_id list (plus 1)
-#The password is always the same
+#The password (string) is always the same
 for item in device_id:
     generic_user = "generic" + str(device_id.index(item) + 1)
     credentials["citrixCredentials"]["Value"].append({
