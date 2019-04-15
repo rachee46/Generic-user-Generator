@@ -19,10 +19,10 @@ credentials = {
 }
 
 #Create a key in the "citrixCredentials" dictionary with "Value" as its key
-# and a blank list as its value associated
+# and a blank list as its value
 credentials["citrixCredentials"]["Value"] = []
 
-#open the device_id.txt file and create a list with each device id as separaste strings
+#open the device_id.txt file and create a list with each device id as separate strings
 with open('device_id.txt', 'r') as inputfile:
     device_id = inputfile.readlines()
 
@@ -43,6 +43,6 @@ for item in device_id:
         "Bdltko$5"
     })
 
-#Automatically generates the json formatted file, credentials.txt, with the value of the variable credentials
+#Automatically generates the json formatted policy file, credentials.txt, with the updated "credentials" dictionary
 with open('credentials.txt', 'w') as outfile:
     json.dump(credentials, outfile)
